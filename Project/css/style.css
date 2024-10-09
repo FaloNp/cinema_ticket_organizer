@@ -1,0 +1,498 @@
+/*Elementy globalne*/
+body {
+	padding: 0px;
+	margin: 0px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 70%;
+	background-color: pink;
+	table-layout: fixed;
+}
+
+td {
+	border: 1px solid #997501;
+	text-align: center;
+	padding: 5px;
+	margin: 2px;
+	flex-basis: 0;
+	flex-grow: 1;
+	background-color: pink;
+	height: 50px;
+	width: 50px;
+}
+
+tr {
+	max-height: 50px;
+}
+
+td:hover {
+	background-color: #997501;
+	color: pink;
+	cursor: pointer;
+}
+
+/*Glowne pojemniki*/
+
+#container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	background-color: pink;
+	overflow: hidden;
+	flex-direction: column;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	align-items: center;
+}
+
+.rowHeader {
+	width: 50%;
+}
+
+.rowindex {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 0px;
+	align-items: center;
+}
+
+/*Pojemnik index.php*/
+.loginBar {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #997501;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0px 10px;
+}
+
+.loginButton {
+	width: 100px;
+	height: 20px;
+	cursor: pointer;
+	color: black;
+	border: 1px solid #997501;
+	margin: 0px 20px;
+	text-align: center;
+}
+
+.loginButton:hover {
+	border-radius: 0%;
+	transition: 0.4s;
+	background-color: pink;
+	color: black;
+}
+
+.ReturnButton {
+	width: 25px;
+	height: 25px;
+	background-color: transparent;
+	cursor: pointer;
+	background-image: url(resource/leftarrow.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: all 0.4s ease;
+}
+
+/*Pojemnik index.php*/
+
+.mainPage {
+	display: flex;
+	flex-direction: column;
+	background-color: #F2D1CB;
+	border: 1px solid #997501;
+	overflow-y: scroll;
+	padding: 50px 5px;
+}
+
+/*Lewa kolumna pojemnika*/
+
+.leftcollumn {
+	background-color: transparent;
+	padding: 0px;
+	display: flex;
+	width: 100%;
+	max-width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.leftcollumncalendar {
+	background-color: transparent;
+	min-height: 200px;
+	width: 100%;
+	border-bottom: 1px solid #997501;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+#calendar {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+
+#today {
+	display: flex;
+	justify-content: left;
+}
+
+.mycalendar {
+	width: 100%;
+}
+
+.calendarButton {
+	width: 15%;
+}
+
+.calendarButton img {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+/*Prawa kolumna pojemnika*/
+
+.rightcollumn {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	padding-bottom: 20px;
+	background-color: transparent;
+}
+
+.rightcollumnrepertuarlist {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	background-color: #F2D1CB;
+	min-height: 250px;
+
+}
+
+.rightcollumnrepertuar {
+	width: 100%;
+	height: 220px;
+	border-bottom: 1px solid #997501;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.rightcollumnrepertuarelement {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+}
+
+.rightcollumnrepertuarelementbuyticket {
+	display: flex;
+	flex-direction: row;
+}
+
+#rightcollumnrepertuarelementid {}
+
+.rightcollumnrepertuarelementquantity:hover {
+	color: #997501;
+}
+
+.rightcollumnrepertuarelement img {
+	max-width: 200px;
+	width: 100%;
+	height: auto;
+}
+
+.rightcollumnrepertuarempty {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	border-bottom: 1px solid #997501;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loginBox {
+	overflow: hidden;
+	position: fixed;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	z-index: 2;
+	background-color: transparent;
+	width: calc(100% - 50px);
+	box-sizing: border-box;
+	padding: 0px 25px;
+	top: 50%;
+	transition: 1.2s;
+	display: flex;
+	flex-direction: row;
+	left: 50%;
+}
+
+.loginBoxContainer {
+	border: 1px solid #F2D1CB;
+	background-color: #997501;
+	height: 200px;
+	overflow-y: scroll;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.loginBoxUser {
+	display: flex;
+	width: 100px;
+	border: 1px solid #F2D1CB;
+}
+
+.userBoxContainer {
+	position: absolute;
+	border: 1px solid #F2D1CB;
+	background-color: #997501;
+	height: 200px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: calc(100% - 50px);
+	margin: 1000px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
+.ticketBox {
+	overflow: hidden;
+	position: fixed;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	z-index: 2;
+	width: 70%;
+	height: 50vh;
+	background-color: #F2D1CB;
+	box-sizing: border-box;
+	padding: 0px 25px;
+	top: 50%;
+	transition: 1.2s;
+	display: flex;
+	flex-direction: row;
+	left: 50%;
+	border: 1px solid #997501;
+}
+
+.ticketBoxcontainer {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.ticketBoxcontainerLocation {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+
+#location {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+.locationlist {
+	display: flex;
+	background-color: transparent;
+}
+
+.locationlist td {
+	background-color: red;
+}
+
+.locationscene {
+	width: 70%;
+	height: 50px;
+	background-color: black;
+	margin: 20px 0px;
+}
+
+.ticketBoxcontainerInformation {
+	position: absolute;
+	right: 1px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+}
+
+.ticketBoxcontainerInformationRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 10px 0px;
+	width: 155px;
+}
+
+.blocked {
+	height: 20px;
+	width: 20px;
+	background-color: red;
+}
+
+.notblocked {
+	height: 20px;
+	width: 20px;
+	background-color: green;
+}
+
+.ticketcontainer {
+	position: absolute;
+	left: 1000%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	transition: 200ms ease-in-out;
+	background-color: #F2D1CB;
+}
+
+.nologinerror {
+	width: 100%;
+	color: blue;
+}
+
+.loginticket {
+	width: 100%;
+	color: blue;
+}
+
+
+.error {
+	color: red;
+	border: 1px solid red;
+	width: 200px;
+	padding: 12px;
+
+}
+
+.activefield {
+	transform: translate(-50%, -50%) scale(1) !important;
+}
+
+.buyTicket {
+	cursor: pointer;
+	background-color: green !important;
+}
+
+#valueBox {
+	background-color: transparent;
+	color: transparent;
+	position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1000px) {
+	#container {
+		flex-direction: column;
+		overflow: hidden;
+		width: 70;
+	}
+
+	.mainPage {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.leftcollumncalendar {
+		border: none;
+		border-right: 1px solid #997501;
+	}
+
+	.leftcollumn {
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 200px;
+	}
+
+	.rightcollumn {
+		justify-content: center;
+	}
+
+	.rightcollumnrepertuar {
+		border: none;
+	}
+
+	.loginBox {
+		width: 50%;
+		top: 50%;
+		left: 70%;
+	}
+}
